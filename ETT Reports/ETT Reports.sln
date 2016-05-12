@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "ETT Reports", "ETT Reports\ETT Reports.rptproj", "{331025B2-2A7A-4A80-AC60-1554847543CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{331025B2-2A7A-4A80-AC60-1554847543CE}.Debug|Default.ActiveCfg = Debug
+		{331025B2-2A7A-4A80-AC60-1554847543CE}.Debug|Default.Build.0 = Debug
+		{331025B2-2A7A-4A80-AC60-1554847543CE}.Debug|Default.Deploy.0 = Debug
+		{331025B2-2A7A-4A80-AC60-1554847543CE}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{331025B2-2A7A-4A80-AC60-1554847543CE}.DebugLocal|Default.Build.0 = DebugLocal
+		{331025B2-2A7A-4A80-AC60-1554847543CE}.Release|Default.ActiveCfg = Release
+		{331025B2-2A7A-4A80-AC60-1554847543CE}.Release|Default.Build.0 = Release
+		{331025B2-2A7A-4A80-AC60-1554847543CE}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

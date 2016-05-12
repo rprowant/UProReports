@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <Height>2in</Height>
+    <Style />
+  </Body>
+  <Width>6.5in</Width>
+  <Page>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Master">
+      <DataSourceReference>BetaMaster</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>5f6a7fac-ec35-4533-825a-ca02705f94ec</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Master">
+      <Query>
+        <DataSourceName>Master</DataSourceName>
+        <CommandText>SELECT        UPRO_JOB.JOB_ID, UPRO_JOB.JOB_NUM, UPRO_JOB.DESCR AS JobDescription, UPRO_PHASE_CODE.CODE_NUM + ' - ' + UPRO_PHASE_CODE.DESCR AS PhaseCode, 
+                         SUM(UPRO_JOB_DESIGN_SPEC_ACTIO.EXTENDED_TOTAL) AS Amount, UPRO_PHASE_CODE.SORT_ORDER, UPRO_JOB.OWNER_ID, UPRO_JOB_DESIGN_SPEC_ACTIO.EXTENDED_UPRO_FEE
+FROM            UPRO_JOB_DESIGN RIGHT OUTER JOIN
+                         UPRO_JOB ON UPRO_JOB_DESIGN.JOB_ID = UPRO_JOB.JOB_ID LEFT OUTER JOIN
+                         UPRO_JOB_DESIGN_SPEC_ACTIO ON UPRO_JOB_DESIGN.JOB_DESIGN_ID = UPRO_JOB_DESIGN_SPEC_ACTIO.JOB_DESIGN_ID LEFT OUTER JOIN
+                         UPRO_SPECIFICATION_ACTION ON UPRO_JOB_DESIGN_SPEC_ACTIO.SPEC_ACTION_ID = UPRO_SPECIFICATION_ACTION.SPECIFICATION_ACTION_ID LEFT OUTER JOIN
+                         UPRO_PHASE_CODE ON UPRO_SPECIFICATION_ACTION.PHASE_CODE_ID = UPRO_PHASE_CODE.PHASE_CODE_ID
+GROUP BY UPRO_JOB.JOB_ID, UPRO_PHASE_CODE.CODE_NUM + ' - ' + UPRO_PHASE_CODE.DESCR, UPRO_PHASE_CODE.SORT_ORDER, UPRO_JOB.JOB_NUM, UPRO_JOB.DESCR, UPRO_JOB.OWNER_ID, 
+                         UPRO_JOB_DESIGN_SPEC_ACTIO.EXTENDED_UPRO_FEE
+HAVING        (UPRO_JOB.OWNER_ID = 38) AND (UPRO_JOB.JOB_ID = 33) AND (SUM(UPRO_JOB_DESIGN_SPEC_ACTIO.EXTENDED_TOTAL) IS NOT NULL)
+ORDER BY UPRO_PHASE_CODE.SORT_ORDER</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="JOB_ID">
+          <DataField>JOB_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="JOB_NUM">
+          <DataField>JOB_NUM</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="JobDescription">
+          <DataField>JobDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhaseCode">
+          <DataField>PhaseCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SORT_ORDER">
+          <DataField>SORT_ORDER</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OWNER_ID">
+          <DataField>OWNER_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EXTENDED_UPRO_FEE">
+          <DataField>EXTENDED_UPRO_FEE</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>5689dc54-524e-4f68-8543-2027e4a25ba6</rd:ReportID>
+</Report>

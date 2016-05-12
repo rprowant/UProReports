@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "UPRO Reports", "UPRO Reports\UPRO Reports.rptproj", "{BAC6DDC7-520D-4ACC-A047-708478066E8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAC6DDC7-520D-4ACC-A047-708478066E8C}.Debug|Default.ActiveCfg = Debug
+		{BAC6DDC7-520D-4ACC-A047-708478066E8C}.Debug|Default.Build.0 = Debug
+		{BAC6DDC7-520D-4ACC-A047-708478066E8C}.Debug|Default.Deploy.0 = Debug
+		{BAC6DDC7-520D-4ACC-A047-708478066E8C}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{BAC6DDC7-520D-4ACC-A047-708478066E8C}.DebugLocal|Default.Build.0 = DebugLocal
+		{BAC6DDC7-520D-4ACC-A047-708478066E8C}.Release|Default.ActiveCfg = Release
+		{BAC6DDC7-520D-4ACC-A047-708478066E8C}.Release|Default.Build.0 = Release
+		{BAC6DDC7-520D-4ACC-A047-708478066E8C}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

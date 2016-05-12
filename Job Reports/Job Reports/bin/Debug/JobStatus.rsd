@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="JobStatus">
+    <Query>
+      <DataSourceReference>BetaMaster</DataSourceReference>
+      <CommandText>SELECT        MEANING, SMART_CODE
+FROM            UPRO_SMART_CODES
+WHERE        (SMART_TYPE = 'JobDesignType')
+GROUP BY MEANING, SMART_CODE, SORT_ORDER
+ORDER BY SORT_ORDER</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="MEANING">
+        <DataField>MEANING</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SMART_CODE">
+        <DataField>SMART_CODE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

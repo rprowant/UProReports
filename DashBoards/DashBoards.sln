@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "DashBoards", "DashBoards\DashBoards.rptproj", "{CAC43BF7-3396-42D2-8011-4AB55F885CEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAC43BF7-3396-42D2-8011-4AB55F885CEA}.Debug|Default.ActiveCfg = Debug
+		{CAC43BF7-3396-42D2-8011-4AB55F885CEA}.Debug|Default.Build.0 = Debug
+		{CAC43BF7-3396-42D2-8011-4AB55F885CEA}.Debug|Default.Deploy.0 = Debug
+		{CAC43BF7-3396-42D2-8011-4AB55F885CEA}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{CAC43BF7-3396-42D2-8011-4AB55F885CEA}.DebugLocal|Default.Build.0 = DebugLocal
+		{CAC43BF7-3396-42D2-8011-4AB55F885CEA}.Release|Default.ActiveCfg = Release
+		{CAC43BF7-3396-42D2-8011-4AB55F885CEA}.Release|Default.Build.0 = Release
+		{CAC43BF7-3396-42D2-8011-4AB55F885CEA}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

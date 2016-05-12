@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="UPro">
+    <Query>
+      <DataSourceReference>DevMaster</DataSourceReference>
+      <CommandText>SELECT        UPRO_LOGO_ID, NAME, LOGO, MIME
+FROM            vw_RPT_UProLogos
+WHERE        (UPRO_LOGO_ID = 3)</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="UPRO_LOGO_ID">
+        <DataField>UPRO_LOGO_ID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="NAME">
+        <DataField>NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="LOGO">
+        <DataField>LOGO</DataField>
+        <rd:TypeName>System.Byte[]</rd:TypeName>
+      </Field>
+      <Field Name="MIME">
+        <DataField>MIME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

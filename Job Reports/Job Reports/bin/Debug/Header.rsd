@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="Header">
+    <Query>
+      <DataSourceReference>BetaMaster</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@Job">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT        JOB_ID, OwnerLogo, OwnerLogo_mime, WGLOGO, WGLOGO_mime
+FROM            vw_RPT_JobHeader
+WHERE        (JOB_ID = @Job)</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="JOB_ID">
+        <DataField>JOB_ID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="OwnerLogo">
+        <DataField>OwnerLogo</DataField>
+        <rd:TypeName>System.Byte[]</rd:TypeName>
+      </Field>
+      <Field Name="OwnerLogo_mime">
+        <DataField>OwnerLogo_mime</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="WGLOGO">
+        <DataField>WGLOGO</DataField>
+        <rd:TypeName>System.Byte[]</rd:TypeName>
+      </Field>
+      <Field Name="WGLOGO_mime">
+        <DataField>WGLOGO_mime</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "BrnM Substation Reports", "BrnM Substation Reports\BrnM Substation Reports.rptproj", "{ECF85E1C-7D1C-490D-B88F-AEFDA4F75AE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECF85E1C-7D1C-490D-B88F-AEFDA4F75AE2}.Debug|Default.ActiveCfg = Debug
+		{ECF85E1C-7D1C-490D-B88F-AEFDA4F75AE2}.Debug|Default.Build.0 = Debug
+		{ECF85E1C-7D1C-490D-B88F-AEFDA4F75AE2}.Debug|Default.Deploy.0 = Debug
+		{ECF85E1C-7D1C-490D-B88F-AEFDA4F75AE2}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{ECF85E1C-7D1C-490D-B88F-AEFDA4F75AE2}.DebugLocal|Default.Build.0 = DebugLocal
+		{ECF85E1C-7D1C-490D-B88F-AEFDA4F75AE2}.Release|Default.ActiveCfg = Release
+		{ECF85E1C-7D1C-490D-B88F-AEFDA4F75AE2}.Release|Default.Build.0 = Release
+		{ECF85E1C-7D1C-490D-B88F-AEFDA4F75AE2}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1319 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"><Body><ReportItems><Tablix Name="Tablix3"><TablixCorner><TablixCornerRows><TablixCornerRow><TablixCornerCell><CellContents><Textbox Name="Textbox177"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value /><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox177</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCornerCell><TablixCornerCell><CellContents><Textbox Name="Textbox65"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Phase: </Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox65</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCornerCell></TablixCornerRow></TablixCornerRows></TablixCorner><TablixBody><TablixColumns><TablixColumn><Width>0.6in</Width></TablixColumn><TablixColumn><Width>0.6in</Width></TablixColumn><TablixColumn><Width>0.6in</Width></TablixColumn><TablixColumn><Width>0.7in</Width></TablixColumn><TablixColumn><Width>0.7in</Width></TablixColumn><TablixColumn><Width>0.7in</Width></TablixColumn></TablixColumns><TablixRows><TablixRow><Height>0.2in</Height><TablixCells><TablixCell><CellContents><Textbox Name="Textbox34"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Planned</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox30</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox35"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Earned</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox31</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox36"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Actual</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox32</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox40"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Planned</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox30</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox41"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Earned</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox31</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox42"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Actual</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox32</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell></TablixCells></TablixRow><TablixRow><Height>0.2in</Height><TablixCells><TablixCell><CellContents><Textbox Name="PlanDollars2"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!PlanDollars.Value</Value><Style><FontSize>8pt</FontSize><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">PlanDollars</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>White</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom><rd:FormatSymbolCulture xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">en-US</rd:FormatSymbolCulture></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="EarnedDollars2"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!EarnedDollars.Value)</Value><Style><FontSize>8pt</FontSize><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">EarnedDollars</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>White</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="ActualDollars2"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!ActualDollars.Value)</Value><Style><FontSize>8pt</FontSize><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">ActualDollars</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>White</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox124"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!PlanDollars.Value)</Value><Style><FontSize>8pt</FontSize><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox117</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>White</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom><rd:FormatSymbolCulture xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">en-US</rd:FormatSymbolCulture></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox115"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!EarnedDollars.Value)</Value><Style><FontSize>8pt</FontSize><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox113</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>White</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="ActualDollars3"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!ActualDollars.Value)</Value><Style><FontSize>8pt</FontSize><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">ActualDollars</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>White</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell></TablixCells></TablixRow><TablixRow><Height>0.2in</Height><TablixCells><TablixCell><CellContents><Textbox Name="Textbox49"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!PlanDollars.Value)</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox10</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightSteelBlue</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox50"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!EarnedDollars.Value)</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox11</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightSteelBlue</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox51"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!ActualDollars.Value)</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox12</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightSteelBlue</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox128"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!PlanDollars.Value)</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox118</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightSteelBlue</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom><rd:FormatSymbolCulture xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">en-US</rd:FormatSymbolCulture></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox122"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!EarnedDollars.Value)</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox114</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightSteelBlue</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox54"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!ActualDollars.Value)</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox12</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightSteelBlue</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell></TablixCells></TablixRow><TablixRow><Height>0.2in</Height><TablixCells><TablixCell><CellContents><Textbox Name="Textbox43"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!PlanDollars.Value)</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox10</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox44"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!EarnedDollars.Value)</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox11</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox45"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!ActualDollars.Value)</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox12</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox131"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!PlanDollars.Value)</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox118</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom><rd:FormatSymbolCulture xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">en-US</rd:FormatSymbolCulture></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox130"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!EarnedDollars.Value)</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox114</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Textbox57"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Sum(Fields!ActualDollars.Value)</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>'$'#,0;('$'#,0)</Format></Style></TextRun></TextRuns><Style /></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox12</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixCell></TablixCells></TablixRow></TablixRows></TablixBody><TablixColumnHierarchy><TablixMembers><TablixMember><Group Name="PCodeDesc1"><GroupExpressions><GroupExpression>=Fields!PCode.Value</GroupExpression><GroupExpression>=Fields!PCodeDesc.Value</GroupExpression></GroupExpressions></Group><SortExpressions><SortExpression><Value>=Fields!SORT_ORDER.Value</Value></SortExpression></SortExpressions><TablixHeader><Size>0.2in</Size><CellContents><Textbox Name="PCodeDesc1"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!PCodeDesc.Value</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">PCodeDesc1</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixHeader><TablixMembers><TablixMember /><TablixMember /><TablixMember /></TablixMembers><Visibility><Hidden>true</Hidden><ToggleItem>Total</ToggleItem></Visibility></TablixMember><TablixMember><TablixHeader><Size>0.2in</Size><CellContents><Textbox Name="Total"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Total</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixHeader><TablixMembers><TablixMember /><TablixMember /><TablixMember /></TablixMembers></TablixMember></TablixMembers></TablixColumnHierarchy><TablixRowHierarchy><TablixMembers><TablixMember><TablixHeader><Size>1.1in</Size><CellContents><Textbox Name="Textbox178"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Month</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox178</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixHeader><TablixMembers><TablixMember><TablixHeader><Size>0.71in</Size><CellContents><Textbox Name="Textbox74"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Week</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox74</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixHeader><TablixMembers><TablixMember /></TablixMembers></TablixMember></TablixMembers></TablixMember><TablixMember><Group Name="MY"><GroupExpressions><GroupExpression>=Fields!MY.Value</GroupExpression></GroupExpressions></Group><SortExpressions><SortExpression><Value>=Fields!MYSort.Value</Value></SortExpression></SortExpressions><TablixHeader><Size>1.1in</Size><CellContents><Textbox Name="MY"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!MY.Value</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">MY</rd:DefaultName><Style><Border><Style>Solid</Style></Border><BackgroundColor>White</BackgroundColor><VerticalAlign>Middle</VerticalAlign><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixHeader><TablixMembers><TablixMember><Group Name="WEEK_ENDING_DATE1"><GroupExpressions><GroupExpression>=Fields!WEEK_ENDING_DATE.Value</GroupExpression></GroupExpressions></Group><SortExpressions><SortExpression><Value>=Fields!WEEK_ENDING_DATE.Value</Value></SortExpression></SortExpressions><TablixHeader><Size>0.71in</Size><CellContents><Textbox Name="WEEK_ENDING_DATE1"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!WEEK_ENDING_DATE.Value</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><Format>M/d/yy</Format></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">WEEK_ENDING_DATE1</rd:DefaultName><Style><Border><Style>Solid</Style></Border><BackgroundColor>White</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixHeader><TablixMembers><TablixMember /></TablixMembers><Visibility><Hidden>true</Hidden><ToggleItem>MY</ToggleItem></Visibility></TablixMember><TablixMember><TablixHeader><Size>0.71in</Size><CellContents><Textbox Name="Textbox182"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>SubTotals:</Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox182</rd:DefaultName><Style><Border><Style>Solid</Style></Border><BackgroundColor>LightSteelBlue</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixHeader><KeepWithGroup>Before</KeepWithGroup></TablixMember></TablixMembers></TablixMember><TablixMember><TablixHeader><Size>1.1in</Size><CellContents><Textbox Name="Textbox180"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value /><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox180</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixHeader><TablixMembers><TablixMember><TablixHeader><Size>0.71in</Size><CellContents><Textbox Name="Textbox66"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Totals: </Value><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Textbox66</rd:DefaultName><Style><Border><Style>Solid</Style></Border><TopBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></TopBorder><BottomBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></BottomBorder><LeftBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></LeftBorder><RightBorder><Color>Black</Color><Style>Solid</Style><Width>1pt</Width></RightBorder><BackgroundColor>LightGrey</BackgroundColor><PaddingLeft>2pt</PaddingLeft><PaddingRight>2pt</PaddingRight><PaddingTop>2pt</PaddingTop><PaddingBottom>2pt</PaddingBottom></Style></Textbox></CellContents></TablixHeader><TablixMembers><TablixMember /></TablixMembers></TablixMember></TablixMembers></TablixMember></TablixMembers></TablixRowHierarchy><DataSetName>Master</DataSetName><Height>1in</Height><Width>5.71in</Width><Style><Border><Style>None</Style></Border></Style></Tablix><Chart Name="Chart1"><ChartCategoryHierarchy><ChartMembers><ChartMember><Group Name="Chart1_CategoryGroup"><GroupExpressions><GroupExpression>=Fields!WEEK_ENDING_DATE.Value</GroupExpression></GroupExpressions></Group><SortExpressions><SortExpression><Value>=Fields!WEEK_ENDING_DATE.Value</Value></SortExpression></SortExpressions><Label>=Fields!WEEK_ENDING_DATE.Value</Label></ChartMember></ChartMembers></ChartCategoryHierarchy><ChartSeriesHierarchy><ChartMembers><ChartMember><Label>Plan Dollars</Label></ChartMember><ChartMember><Label>Earned Dollars</Label></ChartMember><ChartMember><Label>Actual Dollars</Label></ChartMember></ChartMembers></ChartSeriesHierarchy><ChartData><ChartSeriesCollection><ChartSeries Name="PlanDollars"><ChartDataPoints><ChartDataPoint><ChartDataPointValues><Y>=RunningValue(Fields!PlanDollars.Value,SUM,"Master")</Y></ChartDataPointValues><ChartDataLabel><Style /></ChartDataLabel><Style><Border><Color>Red</Color><Width>3pt</Width></Border></Style><ChartMarker><Style /></ChartMarker><DataElementOutput>Output</DataElementOutput></ChartDataPoint></ChartDataPoints><Type>Line</Type><Subtype>Smooth</Subtype><Style /><ChartEmptyPoints><Style /><ChartMarker><Style /></ChartMarker><ChartDataLabel><Style /></ChartDataLabel></ChartEmptyPoints><ChartItemInLegend><LegendText>Plan</LegendText></ChartItemInLegend><ValueAxisName>Primary</ValueAxisName><CategoryAxisName>Primary</CategoryAxisName><ChartSmartLabel><CalloutLineColor>Black</CalloutLineColor><MinMovingDistance>0pt</MinMovingDistance></ChartSmartLabel></ChartSeries><ChartSeries Name="Series"><ChartDataPoints><ChartDataPoint><ChartDataPointValues><Y>=RunningValue(Fields!EarnedDollars.Value,SUM,"Master")</Y></ChartDataPointValues><ChartDataLabel><Style /></ChartDataLabel><Style><Border><Color>Red</Color><Width>3pt</Width></Border></Style><ChartMarker><Style /></ChartMarker><DataElementOutput>Output</DataElementOutput></ChartDataPoint></ChartDataPoints><Type>Line</Type><Subtype>Smooth</Subtype><Style /><ChartEmptyPoints><Style /><ChartMarker><Style /></ChartMarker><ChartDataLabel><Style /></ChartDataLabel></ChartEmptyPoints><ChartItemInLegend><LegendText>Earned</LegendText></ChartItemInLegend><ValueAxisName>Primary</ValueAxisName><CategoryAxisName>Primary</CategoryAxisName><ChartSmartLabel><CalloutLineColor>Black</CalloutLineColor><MinMovingDistance>0pt</MinMovingDistance></ChartSmartLabel></ChartSeries><ChartSeries Name="Series1"><Hidden>=IIF(Fields!TYPE_CODE.Value="TE",False,True)</Hidden><ChartDataPoints><ChartDataPoint><ChartDataPointValues><Y>=RunningValue(Fields!ActualDollars.Value,SUM,"Master")</Y></ChartDataPointValues><ChartDataLabel><Style /></ChartDataLabel><Style><Border><Color>SeaGreen</Color><Width>3pt</Width></Border></Style><ChartMarker><Style /></ChartMarker><DataElementOutput>Output</DataElementOutput></ChartDataPoint></ChartDataPoints><Type>Line</Type><Subtype>Smooth</Subtype><Style /><ChartEmptyPoints><Style /><ChartMarker><Style /></ChartMarker><ChartDataLabel><Style /></ChartDataLabel></ChartEmptyPoints><ChartItemInLegend><LegendText>Actual</LegendText></ChartItemInLegend><ValueAxisName>Primary</ValueAxisName><CategoryAxisName>Primary</CategoryAxisName><ChartSmartLabel><CalloutLineColor>Black</CalloutLineColor><MinMovingDistance>0pt</MinMovingDistance></ChartSmartLabel></ChartSeries></ChartSeriesCollection></ChartData><ChartAreas><ChartArea Name="Default"><ChartCategoryAxes><ChartAxis Name="Primary"><Style><FontSize>8pt</FontSize></Style><ChartAxisTitle><Caption /><Style><FontSize>8pt</FontSize></Style></ChartAxisTitle><ChartMajorGridLines><Enabled>False</Enabled><Style><Border><Color>Gainsboro</Color></Border></Style></ChartMajorGridLines><ChartMinorGridLines><Style><Border><Color>Gainsboro</Color><Style>Dotted</Style></Border></Style></ChartMinorGridLines><ChartMinorTickMarks><Length>0.5</Length></ChartMinorTickMarks><CrossAt>NaN</CrossAt><Minimum>NaN</Minimum><Maximum>NaN</Maximum><AllowLabelRotation>Rotate30</AllowLabelRotation><ChartAxisScaleBreak><Style /></ChartAxisScaleBreak></ChartAxis><ChartAxis Name="Secondary"><Style><FontSize>8pt</FontSize></Style><ChartAxisTitle><Caption>Axis Title</Caption><Style><FontSize>8pt</FontSize></Style></ChartAxisTitle><ChartMajorGridLines><Enabled>False</Enabled><Style><Border><Color>Gainsboro</Color></Border></Style></ChartMajorGridLines><ChartMinorGridLines><Style><Border><Color>Gainsboro</Color><Style>Dotted</Style></Border></Style></ChartMinorGridLines><ChartMinorTickMarks><Length>0.5</Length></ChartMinorTickMarks><CrossAt>NaN</CrossAt><Location>Opposite</Location><Minimum>NaN</Minimum><Maximum>NaN</Maximum><ChartAxisScaleBreak><Style /></ChartAxisScaleBreak></ChartAxis></ChartCategoryAxes><ChartValueAxes><ChartAxis Name="Primary"><Style><FontSize>8pt</FontSize><Format>'$'#,0;('$'#,0)</Format><rd:FormatSymbolCulture xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">en-US</rd:FormatSymbolCulture></Style><ChartAxisTitle><Caption /><Style><FontSize>8pt</FontSize></Style></ChartAxisTitle><ChartMajorGridLines><Style><Border><Color>Gainsboro</Color></Border></Style></ChartMajorGridLines><ChartMinorGridLines><Style><Border><Color>Gainsboro</Color><Style>Dotted</Style></Border></Style></ChartMinorGridLines><ChartMinorTickMarks><Length>0.5</Length></ChartMinorTickMarks><CrossAt>NaN</CrossAt><Minimum>NaN</Minimum><Maximum>NaN</Maximum><ChartAxisScaleBreak><Style /></ChartAxisScaleBreak></ChartAxis><ChartAxis Name="Secondary"><Style><FontSize>8pt</FontSize></Style><ChartAxisTitle><Caption>Axis Title</Caption><Style><FontSize>8pt</FontSize></Style></ChartAxisTitle><ChartMajorGridLines><Style><Border><Color>Gainsboro</Color></Border></Style></ChartMajorGridLines><ChartMinorGridLines><Style><Border><Color>Gainsboro</Color><Style>Dotted</Style></Border></Style></ChartMinorGridLines><ChartMinorTickMarks><Length>0.5</Length></ChartMinorTickMarks><CrossAt>NaN</CrossAt><Location>Opposite</Location><Minimum>NaN</Minimum><Maximum>NaN</Maximum><ChartAxisScaleBreak><Style /></ChartAxisScaleBreak></ChartAxis></ChartValueAxes><Style><BackgroundGradientType>None</BackgroundGradientType></Style></ChartArea></ChartAreas><ChartLegends><ChartLegend Name="Default"><Style><BackgroundGradientType>None</BackgroundGradientType><FontSize>8pt</FontSize></Style><Position>BottomCenter</Position><ChartLegendTitle><Caption /><Style><FontSize>8pt</FontSize><FontWeight>Bold</FontWeight><TextAlign>Center</TextAlign></Style></ChartLegendTitle><HeaderSeparatorColor>Black</HeaderSeparatorColor><ColumnSeparatorColor>Black</ColumnSeparatorColor></ChartLegend></ChartLegends><ChartTitles><ChartTitle Name="Default"><Caption>Project Budget</Caption><Style><BackgroundGradientType>None</BackgroundGradientType><FontWeight>Bold</FontWeight><TextAlign>General</TextAlign><VerticalAlign>Top</VerticalAlign></Style></ChartTitle></ChartTitles><Palette>BrightPastel</Palette><ChartBorderSkin><Style><BackgroundColor>Gray</BackgroundColor><BackgroundGradientType>None</BackgroundGradientType><Color>White</Color></Style></ChartBorderSkin><ChartNoDataMessage Name="NoDataMessage"><Caption>No Data Available</Caption><Style><BackgroundGradientType>None</BackgroundGradientType><TextAlign>General</TextAlign><VerticalAlign>Top</VerticalAlign></Style></ChartNoDataMessage><DataSetName>Master</DataSetName><Top>1.05in</Top><Height>2.62931in</Height><Width>6.8in</Width><ZIndex>1</ZIndex><Style><Border><Color>LightGrey</Color><Style>Solid</Style></Border><BackgroundColor>White</BackgroundColor><BackgroundGradientType>None</BackgroundGradientType></Style></Chart></ReportItems><Height>3.67931in</Height><Style /></Body><Width>6.8in</Width><Page><LeftMargin>1in</LeftMargin><RightMargin>1in</RightMargin><TopMargin>1in</TopMargin><BottomMargin>1in</BottomMargin><Style /></Page><AutoRefresh>0</AutoRefresh><DataSources><DataSource Name="Master"><DataSourceReference>BetaMaster</DataSourceReference><rd:SecurityType xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">None</rd:SecurityType><rd:DataSourceID xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">bbaa2e3b-b440-40ca-869b-48d5af66e099</rd:DataSourceID></DataSource></DataSources><DataSets><DataSet Name="Master"><Query><DataSourceName>Master</DataSourceName><CommandText>SELECT        UPRO_JOB.WORKGROUP_JOB_NUM AS Job, UPRO_JOB.DESCR AS JobName, UPRO_PHASE_CODE.CODE_NUM AS PCode, UPRO_PHASE_CODE.DESCR AS PCodeDesc, CONVERT(VARCHAR, 
+                         UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE, 101) AS WEEK_ENDING_DATE, SUM(COALESCE (UPRO_JOB_SCHEDULE.REVISED_PLANNED_DOLLARS, 0)) AS PlanDollars, UPRO_PHASE_CODE.SORT_ORDER, 
+                         SUM(COALESCE (UPRO_JOB_SCHEDULE.ACTUAL_EARNED_DOLLARS, 0)) AS EarnedDollars, COALESCE (SUM(UPRO_JOB_SCHEDULE.ACTUAL_LABOR_DOLLARS) 
+                         + SUM(UPRO_JOB_SCHEDULE.ACTUAL_MATERIAL_DOLLARS) + SUM(UPRO_JOB_SCHEDULE.ACTUAL_SUB_DOLLARS), 0) AS ActualDollars, UPRO_JOB.TYPE_CODE, 
+                         UPRO_JOB_SCHEDULE_PHASE.PHASE_CODE_ID, UPRO_JOB_SCHEDULE.PLANNED_WEEK_CODE, DATENAME(MONTH, UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) + ', ' + DATENAME(YEAR, 
+                         UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) AS MY, MONTH(UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) + YEAR(UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) * 100 AS MYSort
+FROM            UPRO_JOB LEFT OUTER JOIN
+                         UPRO_JOB_SCHEDULE ON UPRO_JOB.JOB_ID = UPRO_JOB_SCHEDULE.JOB_ID LEFT OUTER JOIN
+                         UPRO_JOB_SCHEDULE_PHASE LEFT OUTER JOIN
+                         UPRO_PHASE_CODE ON UPRO_JOB_SCHEDULE_PHASE.PHASE_CODE_ID = UPRO_PHASE_CODE.PHASE_CODE_ID ON 
+                         UPRO_JOB_SCHEDULE.JOB_SCHEDULE_PHASE_ID = UPRO_JOB_SCHEDULE_PHASE.JOB_SCHEDULE_PHASE_ID
+WHERE        (UPRO_JOB_SCHEDULE.SCHEDULE_TYPE_CODE = 'PBW')
+GROUP BY UPRO_JOB.WORKGROUP_JOB_NUM, UPRO_JOB.DESCR, UPRO_PHASE_CODE.CODE_NUM, UPRO_PHASE_CODE.DESCR, DATENAME(MONTH, UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) 
+                         + ', ' + DATENAME(YEAR, UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE), CONVERT(VARCHAR, UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE, 101), UPRO_PHASE_CODE.SORT_ORDER, 
+                         UPRO_JOB.TYPE_CODE, UPRO_JOB_SCHEDULE_PHASE.PHASE_CODE_ID, UPRO_JOB_SCHEDULE.PLANNED_WEEK_CODE, UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE, 
+                         MONTH(UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) + YEAR(UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) * 100
+HAVING        (UPRO_JOB.WORKGROUP_JOB_NUM = '2TF044-') AND (UPRO_JOB_SCHEDULE.PLANNED_WEEK_CODE &lt;&gt; '0')
+ORDER BY MYSort, WEEK_ENDING_DATE, UPRO_PHASE_CODE.SORT_ORDER</CommandText></Query><Fields><Field Name="Job"><DataField>Job</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.String</rd:TypeName></Field><Field Name="JobName"><DataField>JobName</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.String</rd:TypeName></Field><Field Name="PCode"><DataField>PCode</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.String</rd:TypeName></Field><Field Name="PCodeDesc"><DataField>PCodeDesc</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.String</rd:TypeName></Field><Field Name="WEEK_ENDING_DATE"><DataField>WEEK_ENDING_DATE</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.String</rd:TypeName></Field><Field Name="PlanDollars"><DataField>PlanDollars</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.Decimal</rd:TypeName></Field><Field Name="SORT_ORDER"><DataField>SORT_ORDER</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.Int32</rd:TypeName></Field><Field Name="EarnedDollars"><DataField>EarnedDollars</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.Decimal</rd:TypeName></Field><Field Name="ActualDollars"><DataField>ActualDollars</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.Decimal</rd:TypeName></Field><Field Name="TYPE_CODE"><DataField>TYPE_CODE</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.String</rd:TypeName></Field><Field Name="PHASE_CODE_ID"><DataField>PHASE_CODE_ID</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.Int32</rd:TypeName></Field><Field Name="PLANNED_WEEK_CODE"><DataField>PLANNED_WEEK_CODE</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.String</rd:TypeName></Field><Field Name="MY"><DataField>MY</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.String</rd:TypeName></Field><Field Name="MYSort"><DataField>MYSort</DataField><rd:TypeName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">System.Int32</rd:TypeName></Field></Fields></DataSet></DataSets><rd:ReportUnitType xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Inch</rd:ReportUnitType><rd:ReportID xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">8488e904-1fd8-4e2f-8e23-1eedd75fa089</rd:ReportID></Report>          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!EarnedDollars.Value)</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>'$'#,0;('$'#,0)</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox45">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!ActualDollars.Value)</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>'$'#,0;('$'#,0)</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox131">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!PlanDollars.Value)</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>'$'#,0;('$'#,0)</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox118</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox130">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!EarnedDollars.Value)</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>'$'#,0;('$'#,0)</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox114</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox57">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!ActualDollars.Value)</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>'$'#,0;('$'#,0)</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="PCodeDesc1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!PCode.Value</GroupExpression>
+                  <GroupExpression>=Fields!PCodeDesc.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!SORT_ORDER.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <TablixHeader>
+                <Size>0.2in</Size>
+                <CellContents>
+                  <Textbox Name="PCodeDesc1">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=Fields!PCodeDesc.Value</Value>
+                            <Style>
+                              <FontSize>8pt</FontSize>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>PCodeDesc1</rd:DefaultName>
+                    <Style>
+                      <Border>
+                        <Style>Solid</Style>
+                      </Border>
+                      <TopBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </TopBorder>
+                      <BottomBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </BottomBorder>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </RightBorder>
+                      <BackgroundColor>LightGrey</BackgroundColor>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+              <Visibility>
+                <Hidden>true</Hidden>
+                <ToggleItem>Total</ToggleItem>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <TablixHeader>
+                <Size>0.2in</Size>
+                <CellContents>
+                  <Textbox Name="Total">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>Total</Value>
+                            <Style>
+                              <FontSize>8pt</FontSize>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <Style>
+                      <Border>
+                        <Style>Solid</Style>
+                      </Border>
+                      <TopBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </TopBorder>
+                      <BottomBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </BottomBorder>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </RightBorder>
+                      <BackgroundColor>LightGrey</BackgroundColor>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <TablixHeader>
+                <Size>1.1in</Size>
+                <CellContents>
+                  <Textbox Name="Textbox178">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>Month</Value>
+                            <Style>
+                              <FontSize>8pt</FontSize>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Textbox178</rd:DefaultName>
+                    <Style>
+                      <Border>
+                        <Style>Solid</Style>
+                      </Border>
+                      <TopBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </TopBorder>
+                      <BottomBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </BottomBorder>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </RightBorder>
+                      <BackgroundColor>LightGrey</BackgroundColor>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <TablixMembers>
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>0.71in</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox74">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Week</Value>
+                                <Style>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox74</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Style>Solid</Style>
+                          </Border>
+                          <TopBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </TopBorder>
+                          <BottomBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </BottomBorder>
+                          <LeftBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </LeftBorder>
+                          <RightBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </RightBorder>
+                          <BackgroundColor>LightGrey</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="MY">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!MY.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!MYSort.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <TablixHeader>
+                <Size>1.1in</Size>
+                <CellContents>
+                  <Textbox Name="MY">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=Fields!MY.Value</Value>
+                            <Style>
+                              <FontSize>8pt</FontSize>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>MY</rd:DefaultName>
+                    <Style>
+                      <Border>
+                        <Style>Solid</Style>
+                      </Border>
+                      <BackgroundColor>White</BackgroundColor>
+                      <VerticalAlign>Middle</VerticalAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="WEEK_ENDING_DATE1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!WEEK_ENDING_DATE.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!WEEK_ENDING_DATE.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>0.71in</Size>
+                    <CellContents>
+                      <Textbox Name="WEEK_ENDING_DATE1">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Fields!WEEK_ENDING_DATE.Value</Value>
+                                <Style>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Format>M/d/yy</Format>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>WEEK_ENDING_DATE1</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>White</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                    <ToggleItem>MY</ToggleItem>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>0.71in</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox182">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>SubTotals:</Value>
+                                <Style>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Right</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox182</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>LightSteelBlue</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixMember>
+            <TablixMember>
+              <TablixHeader>
+                <Size>1.1in</Size>
+                <CellContents>
+                  <Textbox Name="Textbox180">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value />
+                            <Style>
+                              <FontSize>8pt</FontSize>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Right</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Textbox180</rd:DefaultName>
+                    <Style>
+                      <Border>
+                        <Style>Solid</Style>
+                      </Border>
+                      <TopBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </TopBorder>
+                      <BottomBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </BottomBorder>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </RightBorder>
+                      <BackgroundColor>LightGrey</BackgroundColor>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <TablixMembers>
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>0.71in</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox66">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Totals: </Value>
+                                <Style>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Right</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox66</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Style>Solid</Style>
+                          </Border>
+                          <TopBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </TopBorder>
+                          <BottomBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </BottomBorder>
+                          <LeftBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </LeftBorder>
+                          <RightBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </RightBorder>
+                          <BackgroundColor>LightGrey</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Master</DataSetName>
+        <Height>1in</Height>
+        <Width>5.71in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Chart Name="Chart1">
+        <ChartCategoryHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Group Name="Chart1_CategoryGroup">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!WEEK_ENDING_DATE.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!WEEK_ENDING_DATE.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <Label>=Fields!WEEK_ENDING_DATE.Value</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartCategoryHierarchy>
+        <ChartSeriesHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Label>Plan Dollars</Label>
+            </ChartMember>
+            <ChartMember>
+              <Label>Earned Dollars</Label>
+            </ChartMember>
+            <ChartMember>
+              <Label>Actual Dollars</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartSeriesHierarchy>
+        <ChartData>
+          <ChartSeriesCollection>
+            <ChartSeries Name="PlanDollars">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=RunningValue(Fields!PlanDollars.Value,SUM,"Master")</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style>
+                    <Border>
+                      <Color>Red</Color>
+                      <Width>3pt</Width>
+                    </Border>
+                  </Style>
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Line</Type>
+              <Subtype>Smooth</Subtype>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ChartItemInLegend>
+                <LegendText>Plan</LegendText>
+              </ChartItemInLegend>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+            <ChartSeries Name="Series">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=RunningValue(Fields!EarnedDollars.Value,SUM,"Master")</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style>
+                    <Border>
+                      <Color>Red</Color>
+                      <Width>3pt</Width>
+                    </Border>
+                  </Style>
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Line</Type>
+              <Subtype>Smooth</Subtype>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ChartItemInLegend>
+                <LegendText>Earned</LegendText>
+              </ChartItemInLegend>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+            <ChartSeries Name="Series1">
+              <Hidden>=IIF(Fields!TYPE_CODE.Value="TE",False,True)</Hidden>
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=RunningValue(Fields!ActualDollars.Value,SUM,"Master")</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style>
+                    <Border>
+                      <Color>SeaGreen</Color>
+                      <Width>3pt</Width>
+                    </Border>
+                  </Style>
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Line</Type>
+              <Subtype>Smooth</Subtype>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ChartItemInLegend>
+                <LegendText>Actual</LegendText>
+              </ChartItemInLegend>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+          </ChartSeriesCollection>
+        </ChartData>
+        <ChartAreas>
+          <ChartArea Name="Default">
+            <ChartCategoryAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <AllowLabelRotation>Rotate30</AllowLabelRotation>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+            </ChartCategoryAxes>
+            <ChartValueAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <Format>'$'#,0;('$'#,0)</Format>
+                  <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+            </ChartValueAxes>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </ChartArea>
+        </ChartAreas>
+        <ChartLegends>
+          <ChartLegend Name="Default">
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <FontSize>8pt</FontSize>
+            </Style>
+            <Position>BottomCenter</Position>
+            <ChartLegendTitle>
+              <Caption />
+              <Style>
+                <FontSize>8pt</FontSize>
+                <FontWeight>Bold</FontWeight>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </ChartLegendTitle>
+            <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+            <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+          </ChartLegend>
+        </ChartLegends>
+        <ChartTitles>
+          <ChartTitle Name="Default">
+            <Caption>Project Budget</Caption>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <FontWeight>Bold</FontWeight>
+              <TextAlign>General</TextAlign>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </ChartTitle>
+        </ChartTitles>
+        <Palette>BrightPastel</Palette>
+        <ChartBorderSkin>
+          <Style>
+            <BackgroundColor>Gray</BackgroundColor>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <Color>White</Color>
+          </Style>
+        </ChartBorderSkin>
+        <ChartNoDataMessage Name="NoDataMessage">
+          <Caption>No Data Available</Caption>
+          <Style>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <TextAlign>General</TextAlign>
+            <VerticalAlign>Top</VerticalAlign>
+          </Style>
+        </ChartNoDataMessage>
+        <DataSetName>Master</DataSetName>
+        <Top>1.05in</Top>
+        <Height>2.62931in</Height>
+        <Width>6.8in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>Solid</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <BackgroundGradientType>None</BackgroundGradientType>
+        </Style>
+      </Chart>
+    </ReportItems>
+    <Height>3.67931in</Height>
+    <Style />
+  </Body>
+  <Width>6.8in</Width>
+  <Page>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Master">
+      <DataSourceReference>BetaMaster</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>bbaa2e3b-b440-40ca-869b-48d5af66e099</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Master">
+      <Query>
+        <DataSourceName>Master</DataSourceName>
+        <CommandText>SELECT        UPRO_JOB.WORKGROUP_JOB_NUM AS Job, UPRO_JOB.DESCR AS JobName, UPRO_PHASE_CODE.CODE_NUM AS PCode, UPRO_PHASE_CODE.DESCR AS PCodeDesc, CONVERT(VARCHAR, 
+                         UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE, 101) AS WEEK_ENDING_DATE, SUM(COALESCE (UPRO_JOB_SCHEDULE.REVISED_PLANNED_DOLLARS, 0)) AS PlanDollars, UPRO_PHASE_CODE.SORT_ORDER, 
+                         SUM(COALESCE (UPRO_JOB_SCHEDULE.ACTUAL_EARNED_DOLLARS, 0)) AS EarnedDollars, COALESCE (SUM(UPRO_JOB_SCHEDULE.ACTUAL_LABOR_DOLLARS) 
+                         + SUM(UPRO_JOB_SCHEDULE.ACTUAL_MATERIAL_DOLLARS) + SUM(UPRO_JOB_SCHEDULE.ACTUAL_SUB_DOLLARS), 0) AS ActualDollars, UPRO_JOB.TYPE_CODE, 
+                         UPRO_JOB_SCHEDULE_PHASE.PHASE_CODE_ID, UPRO_JOB_SCHEDULE.PLANNED_WEEK_CODE, DATENAME(MONTH, UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) + ', ' + DATENAME(YEAR, 
+                         UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) AS MY, MONTH(UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) + YEAR(UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) * 100 AS MYSort
+FROM            UPRO_JOB LEFT OUTER JOIN
+                         UPRO_JOB_SCHEDULE ON UPRO_JOB.JOB_ID = UPRO_JOB_SCHEDULE.JOB_ID LEFT OUTER JOIN
+                         UPRO_JOB_SCHEDULE_PHASE LEFT OUTER JOIN
+                         UPRO_PHASE_CODE ON UPRO_JOB_SCHEDULE_PHASE.PHASE_CODE_ID = UPRO_PHASE_CODE.PHASE_CODE_ID ON 
+                         UPRO_JOB_SCHEDULE.JOB_SCHEDULE_PHASE_ID = UPRO_JOB_SCHEDULE_PHASE.JOB_SCHEDULE_PHASE_ID
+WHERE        (UPRO_JOB_SCHEDULE.SCHEDULE_TYPE_CODE = 'PBW')
+GROUP BY UPRO_JOB.WORKGROUP_JOB_NUM, UPRO_JOB.DESCR, UPRO_PHASE_CODE.CODE_NUM, UPRO_PHASE_CODE.DESCR, DATENAME(MONTH, UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) 
+                         + ', ' + DATENAME(YEAR, UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE), CONVERT(VARCHAR, UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE, 101), UPRO_PHASE_CODE.SORT_ORDER, 
+                         UPRO_JOB.TYPE_CODE, UPRO_JOB_SCHEDULE_PHASE.PHASE_CODE_ID, UPRO_JOB_SCHEDULE.PLANNED_WEEK_CODE, UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE, 
+                         MONTH(UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) + YEAR(UPRO_JOB_SCHEDULE.WEEK_ENDING_DATE) * 100
+HAVING        (UPRO_JOB.WORKGROUP_JOB_NUM = '2TF044-') AND (UPRO_JOB_SCHEDULE.PLANNED_WEEK_CODE &lt;&gt; '0')
+ORDER BY MYSort, WEEK_ENDING_DATE, UPRO_PHASE_CODE.SORT_ORDER</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Job">
+          <DataField>Job</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JobName">
+          <DataField>JobName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PCode">
+          <DataField>PCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PCodeDesc">
+          <DataField>PCodeDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="WEEK_ENDING_DATE">
+          <DataField>WEEK_ENDING_DATE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PlanDollars">
+          <DataField>PlanDollars</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SORT_ORDER">
+          <DataField>SORT_ORDER</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EarnedDollars">
+          <DataField>EarnedDollars</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ActualDollars">
+          <DataField>ActualDollars</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TYPE_CODE">
+          <DataField>TYPE_CODE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PHASE_CODE_ID">
+          <DataField>PHASE_CODE_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PLANNED_WEEK_CODE">
+          <DataField>PLANNED_WEEK_CODE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MY">
+          <DataField>MY</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MYSort">
+          <DataField>MYSort</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>8488e904-1fd8-4e2f-8e23-1eedd75fa089</rd:ReportID>
+</Report>

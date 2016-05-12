@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <Description>Project Units By Location - Wide Form</Description>
+  <Author>Bob Prowant</Author>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Master">
+      <DataSourceReference>BetaMaster</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>af6eb674-2721-4815-a312-c3b3507635a3</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Master">
+      <Query>
+        <DataSourceName>Master</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@RID">
+            <Value>=Parameters!RID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@T">
+            <Value>=Parameters!T.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PHASE">
+            <Value>=Parameters!PHASE.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Complete">
+            <Value>=Parameters!Complete.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT        UPRO_JOB.JOB_ID, 'Part ' + UPRO_PHASE_CODE.CODE_NUM + ' - ' + UPRO_PHASE_CODE.DESCR AS Phase, UPRO_PHASE_CODE.SORT_ORDER AS PhaseSort, UPRO_SPECIFICATION.SPECIFICATION_NUM, 
+                         UPRO_SPECIFICATION.DESCR AS SpecDescription, UPRO_SPECIFICATION.SORT_ORDER AS SpecSort, UPRO_JOB_LOCATION.LOCATION_NUM_CHAR AS Location, 
+                         UPRO_JOB_LOCATION.SORT_ORDER AS LocationSort, UPRO_JOB_LOCATION_DETAIL.ESTIMATED_QTY, UPRO_JOB_LOCATION_DETAIL.COMPLETE, 
+                         UPRO_JOB_LOCATION_DETAIL.COMPLETE_DATE AS SpecActionCompDate, UPRO_INVOICE.REFERENCE_NUM, UPRO_JOB.DESCR, UPRO_JOB.WORKGROUP_JOB_NUM, 
+                         COALESCE (UPRO_JOB_LOCATION_DETAIL.COMPLETED_TO_DATE, 0) AS QTY, UPRO_JOB_LOCATION_DETAIL.COMMENTS, UPRO_JOB_LOCATION_DETAIL.JOB_LOCATION_DETAIL_ID, 
+                         vw_RPT_Active_Invoice_Location_Details.INVOICE_LOCATION_DETAIL_ID, vw_RPT_Active_Invoice_Location_Details.QTY AS BillQTY, CASE WHEN UPRO_INVOICE.REFERENCE_NUM &lt;&gt; NULL AND 
+                         COALESCE (UPRO_JOB_LOCATION_DETAIL.COMPLETED_TO_DATE, 0) &lt;&gt; COALESCE (vw_RPT_Active_Invoice_Location_Details.QTY, 0) THEN COALESCE (vw_RPT_Active_Invoice_Location_Details.QTY, 0) 
+                         ELSE COALESCE (UPRO_JOB_LOCATION_DETAIL.COMPLETED_TO_DATE, 0) END AS CompletedQTY, CASE WHEN COALESCE (vw_RPT_Active_Invoice_Location_Details.QTY, 0) &gt; 0 AND 
+                         COALESCE (UPRO_JOB_LOCATION_DETAIL.ESTIMATED_QTY, 0) &lt;&gt; COALESCE (vw_RPT_Active_Invoice_Location_Details.QTY, 0) THEN COALESCE (vw_RPT_Active_Invoice_Location_Details.QTY, 0) 
+                         ELSE COALESCE (UPRO_JOB_LOCATION_DETAIL.ESTIMATED_QTY, 0) END AS EstimatedQTY, UPRO_PHASE_CODE_SECTION.SORT_ORDER AS PhaseSectuionSort, 
+                         UPRO_JOB_LOCATION_DETAIL.DESIGN_QTY, UPRO_PHASE_CODE.PHASE_CODE_ID, CASE WHEN dbo.UPRO_JOB_LOCATION_DETAIL.COMPLETE = 'N' THEN 'False' ELSE 'True' END AS Expr1, 
+                         ARPT_REPORT_REQUEST.ARPT_REPORT_REQUEST_ID, ARPT_REPORT_REQUEST.SEC_TOKEN, ARPT_REPORT_REQUEST.EXPIRATION_DATE_TIME
+FROM            UPRO_PHASE_CODE INNER JOIN
+                         UPRO_PHASE_CODE_SECTION ON UPRO_PHASE_CODE.PHASE_CODE_SECTION_ID = UPRO_PHASE_CODE_SECTION.PHASE_CODE_SECTION_ID RIGHT OUTER JOIN
+                         ARPT_REPORT_REQUEST RIGHT OUTER JOIN
+                         UPRO_JOB_DESIGN ON ARPT_REPORT_REQUEST.FOREIGN_KEY_ID = UPRO_JOB_DESIGN.JOB_DESIGN_ID LEFT OUTER JOIN
+                         vw_RPT_Active_Invoice_Location_Details LEFT OUTER JOIN
+                         UPRO_INVOICE_SUMMARY ON vw_RPT_Active_Invoice_Location_Details.INVOICE_SUMMARY_ID = UPRO_INVOICE_SUMMARY.INVOICE_SUMMARY_ID LEFT OUTER JOIN
+                         UPRO_INVOICE ON UPRO_INVOICE_SUMMARY.INVOICE_ID = UPRO_INVOICE.INVOICE_ID RIGHT OUTER JOIN
+                         UPRO_JOB_LOCATION_DETAIL RIGHT OUTER JOIN
+                         UPRO_JOB_LOCATION ON UPRO_JOB_LOCATION_DETAIL.JOB_LOCATION_ID = UPRO_JOB_LOCATION.JOB_LOCATION_ID LEFT OUTER JOIN
+                         UPRO_SPECIFICATION_ACTION ON UPRO_JOB_LOCATION_DETAIL.SPECIFICATION_ACTION_ID = UPRO_SPECIFICATION_ACTION.SPECIFICATION_ACTION_ID ON 
+                         vw_RPT_Active_Invoice_Location_Details.LOCATION_DETAIL_ID = UPRO_JOB_LOCATION_DETAIL.JOB_LOCATION_DETAIL_ID ON 
+                         UPRO_JOB_DESIGN.JOB_DESIGN_ID = UPRO_JOB_LOCATION.JOB_DESIGN_ID LEFT OUTER JOIN
+                         UPRO_JOB ON UPRO_JOB_DESIGN.JOB_ID = UPRO_JOB.JOB_ID ON UPRO_PHASE_CODE_SECTION.ORG_ID = UPRO_JOB.OWNER_ID AND 
+                         UPRO_PHASE_CODE.PHASE_CODE_ID = UPRO_SPECIFICATION_ACTION.PHASE_CODE_ID LEFT OUTER JOIN
+                         UPRO_SPECIFICATION ON UPRO_PHASE_CODE_SECTION.PHASE_CODE_SECTION_ID = UPRO_SPECIFICATION.PHASE_CODE_SECTION_ID AND 
+                         UPRO_SPECIFICATION_ACTION.SPECIFICATION_ID = UPRO_SPECIFICATION.SPECIFICATION_ID
+GROUP BY UPRO_JOB.JOB_ID, 'Part ' + UPRO_PHASE_CODE.CODE_NUM + ' - ' + UPRO_PHASE_CODE.DESCR, UPRO_PHASE_CODE.SORT_ORDER, UPRO_SPECIFICATION.SPECIFICATION_NUM, 
+                         UPRO_SPECIFICATION.DESCR, UPRO_SPECIFICATION.SORT_ORDER, UPRO_JOB_LOCATION.LOCATION_NUM_CHAR, UPRO_JOB_LOCATION.SORT_ORDER, UPRO_JOB_LOCATION_DETAIL.ESTIMATED_QTY, 
+                         UPRO_JOB_LOCATION_DETAIL.COMPLETE, UPRO_JOB_LOCATION_DETAIL.COMPLETE_DATE, UPRO_INVOICE.REFERENCE_NUM, UPRO_JOB.DESCR, UPRO_JOB.WORKGROUP_JOB_NUM, 
+                         COALESCE (UPRO_JOB_LOCATION_DETAIL.COMPLETED_TO_DATE, 0), UPRO_JOB_LOCATION_DETAIL.COMMENTS, UPRO_JOB_LOCATION_DETAIL.JOB_LOCATION_DETAIL_ID, 
+                         vw_RPT_Active_Invoice_Location_Details.INVOICE_LOCATION_DETAIL_ID, vw_RPT_Active_Invoice_Location_Details.QTY, CASE WHEN UPRO_INVOICE.REFERENCE_NUM &lt;&gt; NULL AND 
+                         COALESCE (UPRO_JOB_LOCATION_DETAIL.COMPLETED_TO_DATE, 0) &lt;&gt; COALESCE (vw_RPT_Active_Invoice_Location_Details.QTY, 0) THEN COALESCE (vw_RPT_Active_Invoice_Location_Details.QTY, 0) 
+                         ELSE COALESCE (UPRO_JOB_LOCATION_DETAIL.COMPLETED_TO_DATE, 0) END, UPRO_PHASE_CODE_SECTION.SORT_ORDER, UPRO_JOB_LOCATION_DETAIL.DESIGN_QTY, 
+                         UPRO_PHASE_CODE.PHASE_CODE_ID, ARPT_REPORT_REQUEST.ARPT_REPORT_REQUEST_ID, ARPT_REPORT_REQUEST.SEC_TOKEN, ARPT_REPORT_REQUEST.EXPIRATION_DATE_TIME
+HAVING        (ARPT_REPORT_REQUEST.ARPT_REPORT_REQUEST_ID = @RID) AND (ARPT_REPORT_REQUEST.SEC_TOKEN = @T) AND (ARPT_REPORT_REQUEST.EXPIRATION_DATE_TIME &gt;= { fn NOW() }) AND 
+                         (CASE WHEN dbo.UPRO_JOB_LOCATION_DETAIL.COMPLETE = 'N' THEN 'False' ELSE 'True' END = 'False') AND (UPRO_PHASE_CODE.PHASE_CODE_ID IN (@PHASE)) OR
+                         (ARPT_REPORT_REQUEST.ARPT_REPORT_REQUEST_ID = @RID) AND (ARPT_REPORT_REQUEST.SEC_TOKEN = @T) AND (ARPT_REPORT_REQUEST.EXPIRATION_DATE_TIME &gt; { fn NOW() }) AND 
+                         (CASE WHEN dbo.UPRO_JOB_LOCATION_DETAIL.COMPLETE = 'N' THEN 'False' ELSE 'True' END = @Complete) AND (UPRO_PHASE_CODE.PHASE_CODE_ID IN (@PHASE))
+ORDER BY PhaseSectuionSort, PhaseSort, SpecSort, LocationSort</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="JOB_ID">
+          <DataField>JOB_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Phase">
+          <DataField>Phase</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhaseSort">
+          <DataField>PhaseSort</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SPECIFICATION_NUM">
+          <DataField>SPECIFICATION_NUM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SpecDescription">
+          <DataField>SpecDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SpecSort">
+          <DataField>SpecSort</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Location">
+          <DataField>Location</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LocationSort">
+          <DataField>LocationSort</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ESTIMATED_QTY">
+          <DataField>ESTIMATED_QTY</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="COMPLETE">
+          <DataField>COMPLETE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SpecActionCompDate">
+          <DataField>SpecActionCompDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="REFERENCE_NUM">
+          <DataField>REFERENCE_NUM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DESCR">
+          <DataField>DESCR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="WORKGROUP_JOB_NUM">
+          <DataField>WORKGROUP_JOB_NUM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QTY">
+          <DataField>QTY</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="COMMENTS">
+          <DataField>COMMENTS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JOB_LOCATION_DETAIL_ID">
+          <DataField>JOB_LOCATION_DETAIL_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="INVOICE_LOCATION_DETAIL_ID">
+          <DataField>INVOICE_LOCATION_DETAIL_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BillQTY">
+          <DataField>BillQTY</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CompletedQTY">
+          <DataField>CompletedQTY</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="EstimatedQTY">
+          <DataField>EstimatedQTY</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PhaseSectuionSort">
+          <DataField>PhaseSectuionSort</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DESIGN_QTY">
+          <DataField>DESIGN_QTY</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PHASE_CODE_ID">
+          <DataField>PHASE_CODE_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Expr1">
+          <DataField>Expr1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ARPT_REPORT_REQUEST_ID">
+          <DataField>ARPT_REPORT_REQUEST_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SEC_TOKEN">
+          <DataField>SEC_TOKEN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EXPIRATION_DATE_TIME">
+          <DataField>EXPIRATION_DATE_TIME</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Header">
+      <Query>
+        <DataSourceName>Master</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@RID">
+            <Value>=Parameters!RID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@T">
+            <Value>=Parameters!T.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT        vw_RPT_JobHeader.JOB_ID, vw_RPT_JobHeader.OwnerLogo, vw_RPT_JobHeader.OwnerLogo_mime, vw_RPT_JobHeader.WGLOGO, vw_RPT_JobHeader.WGLOGO_mime, 
+                         ARPT_REPORT_REQUEST.ARPT_REPORT_REQUEST_ID, ARPT_REPORT_REQUEST.SEC_TOKEN, ARPT_REPORT_REQUEST.EXPIRATION_DATE_TIME, ARPT_REPORT_REQUEST.FOREIGN_KEY_ID, 
+                         UPRO_JOB_DESIGN.JOB_ID AS Expr1, vw_RPT_JobHeader.WORKGROUP_JOB_NUM, vw_RPT_JobHeader.JobDescription
+FROM            UPRO_JOB_DESIGN LEFT OUTER JOIN
+                         vw_RPT_JobHeader ON UPRO_JOB_DESIGN.JOB_ID = vw_RPT_JobHeader.JOB_ID RIGHT OUTER JOIN
+                         ARPT_REPORT_REQUEST ON UPRO_JOB_DESIGN.JOB_DESIGN_ID = ARPT_REPORT_REQUEST.FOREIGN_KEY_ID
+WHERE        (ARPT_REPORT_REQUEST.ARPT_REPORT_REQUEST_ID = @RID) AND (ARPT_REPORT_REQUEST.SEC_TOKEN = @T) AND (ARPT_REPORT_REQUEST.EXPIRATION_DATE_TIME &gt;= { fn NOW() })</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="JOB_ID">
+          <DataField>JOB_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OwnerLogo">
+          <DataField>OwnerLogo</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="OwnerLogo_mime">
+          <DataField>OwnerLogo_mime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="WGLOGO">
+          <DataField>WGLOGO</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="WGLOGO_mime">
+          <DataField>WGLOGO_mime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ARPT_REPORT_REQUEST_ID">
+          <DataField>ARPT_REPORT_REQUEST_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SEC_TOKEN">
+          <DataField>SEC_TOKEN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EXPIRATION_DATE_TIME">
+          <DataField>EXPIRATION_DATE_TIME</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="FOREIGN_KEY_ID">
+          <DataField>FOREIGN_KEY_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Expr1">
+          <DataField>Expr1</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="WORKGROUP_JOB_NUM">
+          <DataField>WORKGROUP_JOB_NUM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JobDescription">
+          <DataField>JobDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="PhaseList">
+      <Query>
+        <DataSourceName>Master</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@RID">
+            <Value>=Parameters!RID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@T">
+            <Value>=Parameters!T.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT        'Part ' + UPRO_PHASE_CODE.CODE_NUM + ' - ' + UPRO_PHASE_CODE.DESCR AS Phase, UPRO_PHASE_CODE.SORT_ORDER AS PhaseSort, UPRO_PHASE_CODE.PHASE_CODE_ID, 
+                         ARPT_REPORT_REQUEST.ARPT_REPORT_REQUEST_ID, ARPT_REPORT_REQUEST.SEC_TOKEN, ARPT_REPORT_REQUEST.EXPIRATION_DATE_TIME
+FROM            ARPT_REPORT_REQUEST LEFT OUTER JOIN
+                         UPRO_JOB_LOCATION RIGHT OUTER JOIN
+                         UPRO_JOB_DESIGN ON UPRO_JOB_LOCATION.JOB_DESIGN_ID = UPRO_JOB_DESIGN.JOB_DESIGN_ID LEFT OUTER JOIN
+                         UPRO_JOB_LOCATION_DETAIL LEFT OUTER JOIN
+                         UPRO_PHASE_CODE RIGHT OUTER JOIN
+                         UPRO_SPECIFICATION_ACTION ON UPRO_PHASE_CODE.PHASE_CODE_ID = UPRO_SPECIFICATION_ACTION.PHASE_CODE_ID ON 
+                         UPRO_JOB_LOCATION_DETAIL.SPECIFICATION_ACTION_ID = UPRO_SPECIFICATION_ACTION.SPECIFICATION_ACTION_ID ON 
+                         UPRO_JOB_LOCATION.JOB_LOCATION_ID = UPRO_JOB_LOCATION_DETAIL.JOB_LOCATION_ID ON ARPT_REPORT_REQUEST.FOREIGN_KEY_ID = UPRO_JOB_DESIGN.JOB_DESIGN_ID
+GROUP BY 'Part ' + UPRO_PHASE_CODE.CODE_NUM + ' - ' + UPRO_PHASE_CODE.DESCR, UPRO_PHASE_CODE.SORT_ORDER, UPRO_PHASE_CODE.PHASE_CODE_ID, 
+                         ARPT_REPORT_REQUEST.ARPT_REPORT_REQUEST_ID, ARPT_REPORT_REQUEST.SEC_TOKEN, ARPT_REPORT_REQUEST.EXPIRATION_DATE_TIME
+HAVING        (ARPT_REPORT_REQUEST.ARPT_REPORT_REQUEST_ID = @RID) AND (ARPT_REPORT_REQUEST.SEC_TOKEN = @T) AND (ARPT_REPORT_REQUEST.EXPIRATION_DATE_TIME &gt;= { fn NOW() })
+ORDER BY PhaseSort</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Phase">
+          <DataField>Phase</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhaseSort">
+          <DataField>PhaseSort</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PHASE_CODE_ID">
+          <DataField>PHASE_CODE_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ARPT_REPORT_REQUEST_ID">
+          <DataField>ARPT_REPORT_REQUEST_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SEC_TOKEN">
+          <DataField>SEC_TOKEN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EXPIRATION_DATE_TIME">
+          <DataField>EXPIRATION_DATE_TIME</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Image Name="Image3">
+            <Source>Database</Source>
+            <Value>=First(Fields!WGLOGO.Value, "Header")</Value>
+            <MIMEType>=First(Fields!WGLOGO_mime.Value, "Header")</MIMEType>
+            <Sizing>FitProportional</Sizing>
+            <Height>0.5in</Height>
+            <Width>1in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Textbox Name="Textbox9">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Project Units By Location</Value>
+                    <Style>
+                      <FontSize>28pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox7</rd:DefaultName>
+            <Left>1in</Left>
+            <Height>0.5in</Height>
+            <Width>14in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Image Name="Image5">
+            <Source>Database</Source>
+            <Value>=First(Fields!OwnerLogo.Value, "Header")</Value>
+            <MIMEType>=First(Fields!OwnerLogo_mime.Value, "Header")</MIMEType>
+            <Sizing>FitProportional</Sizing>
+            <Left>15in</Left>
+            <Height>0.5in</Height>
+            <Width>1in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Tablix Name="Tablix3">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>0.75in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.2in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox12">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Loc</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox12</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <BackgroundColor>LightGrey</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox14">
+                          <CanGrow>true</CanGrow>
+                          <CanShrink>true</CanShrink>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Spec</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox14</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <BackgroundColor>LightGrey</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Location">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Location.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Location</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Tablix Name="Tablix4">
+                          <TablixBody>
+                            <TablixColumns>
+                              <TablixColumn>
+                                <Width>1.2in</Width>
+                              </TablixColumn>
+                            </TablixColumns>
+                            <TablixRows>
+                              <TablixRow>
+                                <Height>0.25in</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="SPECIFICATION_NUM2">
+                                        <CanGrow>true</CanGrow>
+                                        <CanShrink>true</CanShrink>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=Fields!SPECIFICATION_NUM.Value</Value>
+                                                <Style>
+                                                  <FontWeight>=IIF(Fields!COMPLETE.Value="Y","Default","Heavy")</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>SPECIFICATION_NUM1</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <TopBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </TopBorder>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </BottomBorder>
+                                          <LeftBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </LeftBorder>
+                                          <RightBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </RightBorder>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                            </TablixRows>
+                          </TablixBody>
+                          <TablixColumnHierarchy>
+                            <TablixMembers>
+                              <TablixMember>
+                                <Group Name="ColumnGroup2" />
+                                <SortExpressions>
+                                  <SortExpression>
+                                    <Value>=Fields!PhaseSort.Value</Value>
+                                  </SortExpression>
+                                  <SortExpression>
+                                    <Value>=Fields!SpecSort.Value</Value>
+                                  </SortExpression>
+                                </SortExpressions>
+                              </TablixMember>
+                            </TablixMembers>
+                          </TablixColumnHierarchy>
+                          <TablixRowHierarchy>
+                            <TablixMembers>
+                              <TablixMember />
+                            </TablixMembers>
+                          </TablixRowHierarchy>
+                          <DataSetName>Master</DataSetName>
+                          <ZIndex>3</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                          </Style>
+                        </Tablix>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Location.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!LocationSort.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>Master</DataSetName>
+            <Top>0.55in</Top>
+            <Height>0.5in</Height>
+            <Width>1.95in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>1.05in</Height>
+        <Style />
+      </Body>
+      <Width>16in</Width>
+      <Page>
+        <PageHeader>
+          <Height>0.5in</Height>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Textbox8">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Project Units By Location" &amp; VbCrLf &amp; First(Fields!WORKGROUP_JOB_NUM.Value, "Header") &amp; " " &amp; First(Fields!JobDescription.Value, "Header")</Value>
+                      <Style>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox7</rd:DefaultName>
+              <Left>0.01042in</Left>
+              <Height>0.5in</Height>
+              <Width>15.98958in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <BottomBorder>
+              <Style>Solid</Style>
+              <Width>2.75pt</Width>
+            </BottomBorder>
+          </Style>
+        </PageHeader>
+        <PageFooter>
+          <Height>0.2in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="PageNumber">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Page </Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>=Globals!PageNumber</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value> of </Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>=Globals!TotalPages</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>PageNumber</rd:DefaultName>
+              <Top>0.025in</Top>
+              <Left>7.5in</Left>
+              <Height>0.175in</Height>
+              <Width>1in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ExecutionTime">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!ExecutionTime</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <Format>MMM d, yyyy</Format>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>ExecutionTime</rd:DefaultName>
+              <Top>0.025in</Top>
+              <Left>13.55625in</Left>
+              <Height>0.175in</Height>
+              <Width>2.44375in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <TopBorder>
+              <Style>Solid</Style>
+              <Width>1.5pt</Width>
+            </TopBorder>
+          </Style>
+        </PageFooter>
+        <PageHeight>17in</PageHeight>
+        <PageWidth>11in</PageWidth>
+        <LeftMargin>0.5in</LeftMargin>
+        <RightMargin>0.5in</RightMargin>
+        <TopMargin>0.5in</TopMargin>
+        <BottomMargin>0.5in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="RID">
+      <DataType>Integer</DataType>
+      <Prompt>RID</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="T">
+      <DataType>String</DataType>
+      <Prompt>T</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="PHASE">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>PhaseList</DataSetName>
+          <ValueField>PHASE_CODE_ID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Phase</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>PhaseList</DataSetName>
+          <ValueField>PHASE_CODE_ID</ValueField>
+          <LabelField>Phase</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="Complete">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Show Complete</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>true</Value>
+            <Label>Yes</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>false</Value>
+            <Label>No</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>cde98773-af73-4671-ad06-84d2b61bfb49</rd:ReportID>
+</Report>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <Height>2in</Height>
+    <Style />
+  </Body>
+  <Width>6.5in</Width>
+  <Page>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Master">
+      <DataSourceReference>BetaMaster</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>c297a0f6-bed1-400c-bb8a-787db9e9dece</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Master">
+      <Query>
+        <DataSourceName>Master</DataSourceName>
+        <CommandText>SELECT        CASE WHEN TASK_NUM = 'Units' OR
+                         TASK_NUM IS NULL THEN JOB_NUM_CHAR ELSE TASK_NUM END AS WO, UPRO_JOB.WORKGROUP_JOB_NUM AS PLSJob, UPRO_JOB.DESCR AS JobDescr, UPRO_JOB.STATUS_CODE, 
+                         SUM(UPRO_INVOICE.NET_DUE_AMOUNT) AS InvoiceAmount, UPRO_JOB_TASK.JOB_ID
+FROM            UPRO_JOB FULL OUTER JOIN
+                         UPRO_INVOICE LEFT OUTER JOIN
+                         UPRO_INVOICE_TASK LEFT OUTER JOIN
+                         UPRO_JOB_TASK ON UPRO_INVOICE_TASK.JOB_TASK_ID = UPRO_JOB_TASK.JOB_TASK_ID ON UPRO_INVOICE.INVOICE_ID = UPRO_INVOICE_TASK.INVOICE_ID ON 
+                         UPRO_JOB.JOB_ID = UPRO_INVOICE.JOB_ID
+WHERE        (UPRO_JOB.OWNER_ID = 41) AND (UPRO_JOB.CONTRACT_TYPE_CODE = 'BL')
+GROUP BY UPRO_JOB.WORKGROUP_JOB_NUM, CASE WHEN TASK_NUM = 'Units' OR
+                         TASK_NUM IS NULL THEN JOB_NUM_CHAR ELSE TASK_NUM END, UPRO_JOB.DESCR, UPRO_JOB.STATUS_CODE, UPRO_JOB_TASK.TASK_NUM, UPRO_JOB_TASK.JOB_ID
+HAVING        (NOT (UPRO_JOB.STATUS_CODE IN ('CN', 'CP')))</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="WO">
+          <DataField>WO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PLSJob">
+          <DataField>PLSJob</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JobDescr">
+          <DataField>JobDescr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="STATUS_CODE">
+          <DataField>STATUS_CODE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="InvoiceAmount">
+          <DataField>InvoiceAmount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="JOB_ID">
+          <DataField>JOB_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>71de210a-442f-4679-acb1-3a24394969ef</rd:ReportID>
+</Report>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="JobList">
+    <Query>
+      <DataSourceReference>BetaMaster</DataSourceReference>
+      <CommandText>SELECT        UPRO_JOB.JOB_NUM, COALESCE (UPRO_JOB.WORKGROUP_JOB_NUM, 'TBD -') + ' ' + UPRO_JOB.DESCR AS JobDesc, UPRO_JOB.JOB_ID, UPRO_JOB_DESIGN.DESIGN_TYPE_CODE, 
+                         UPRO_JOB.STATUS_CODE, UPRO_JOB.WORKGROUP_JOB_NUM
+FROM            UPRO_JOB INNER JOIN
+                         UPRO_JOB_DESIGN ON UPRO_JOB.JOB_ID = UPRO_JOB_DESIGN.JOB_ID
+GROUP BY UPRO_JOB.JOB_NUM, COALESCE (UPRO_JOB.WORKGROUP_JOB_NUM, 'TBD -') + ' ' + UPRO_JOB.DESCR, UPRO_JOB.JOB_ID, UPRO_JOB_DESIGN.DESIGN_TYPE_CODE, UPRO_JOB.STATUS_CODE, 
+                         UPRO_JOB.WORKGROUP_JOB_NUM
+HAVING        (UPRO_JOB_DESIGN.DESIGN_TYPE_CODE = 'AD') AND (UPRO_JOB.STATUS_CODE = 'PR' OR
+                         UPRO_JOB.STATUS_CODE = 'FC')
+ORDER BY UPRO_JOB.WORKGROUP_JOB_NUM, JobDesc</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="JOB_NUM">
+        <DataField>JOB_NUM</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="JobDesc">
+        <DataField>JobDesc</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="JOB_ID">
+        <DataField>JOB_ID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="DESIGN_TYPE_CODE">
+        <DataField>DESIGN_TYPE_CODE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="STATUS_CODE">
+        <DataField>STATUS_CODE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="WORKGROUP_JOB_NUM">
+        <DataField>WORKGROUP_JOB_NUM</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

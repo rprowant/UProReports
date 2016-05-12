@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Master">
+      <DataSourceReference>ProdMaster</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>1dbd2b5f-0642-4cdd-9ec0-05510039ddd6</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Master">
+      <Query>
+        <DataSourceName>Master</DataSourceName>
+        <CommandText>SELECT        UPRO_ORGANIZATION.ORG_ID, UPRO_ORGANIZATION.NAME, UPRO_CONTRACT.CONTRACT_ID, UPRO_CONTRACT.CONTRACT_NUM, UPRO_CONTRACT.NAME AS ContractName, 
+                         UPRO_OWNER_BENEFIT.BENEFIT, UPRO_OWNER_BENEFIT.CATEGORY_CODE, UPRO_CONTRACT_BENEFIT.ST_AMOUNT, UPRO_CONTRACT_BENEFIT.OT_AMOUNT, UPRO_CONTRACT_BENEFIT.DT_AMOUNT,
+                          UPRO_CONTRACT_BENEFIT.ST_PERCENT, UPRO_CONTRACT_BENEFIT.OT_PERCENT, UPRO_CONTRACT_BENEFIT.DT_PERCENT
+FROM            UPRO_OWNER_BENEFIT RIGHT OUTER JOIN
+                         UPRO_CRAFT_BENEFIT RIGHT OUTER JOIN
+                         UPRO_CONTRACT_BENEFIT ON UPRO_CRAFT_BENEFIT.CRAFT_BENEFIT_ID = UPRO_CONTRACT_BENEFIT.BENEFIT_ID RIGHT OUTER JOIN
+                         UPRO_CONTRACT_BENEFIT_CAT ON UPRO_CONTRACT_BENEFIT.CONTRACT_BENEFIT_CATEGORY_ID = UPRO_CONTRACT_BENEFIT_CAT.CONTRACT_BENEFIT_CATEGORY_ID RIGHT OUTER JOIN
+                         UPRO_CONTRACT AS UPRO_CONTRACT_1 ON UPRO_CONTRACT_BENEFIT_CAT.CONTRACT_ID = UPRO_CONTRACT_1.CONTRACT_ID RIGHT OUTER JOIN
+                         UPRO_CONTRACT ON UPRO_CONTRACT_1.PARENT_CONTRACT_ID = UPRO_CONTRACT.CONTRACT_ID RIGHT OUTER JOIN
+                         UPRO_ORGANIZATION ON UPRO_CONTRACT.OWNER_ID = UPRO_ORGANIZATION.ORG_ID ON UPRO_OWNER_BENEFIT.OWNER_BENEFIT_ID = UPRO_CRAFT_BENEFIT.OWNER_BENEFIT_ID
+WHERE        (UPRO_ORGANIZATION.ORG_TYPE_CODE = 'ow') AND (UPRO_CONTRACT.MASTER_CONTRACT_FLAG = 'Y')
+GROUP BY UPRO_ORGANIZATION.ORG_ID, UPRO_ORGANIZATION.NAME, UPRO_CONTRACT.CONTRACT_ID, UPRO_CONTRACT.CONTRACT_NUM, UPRO_CONTRACT.NAME, UPRO_OWNER_BENEFIT.BENEFIT, 
+                         UPRO_OWNER_BENEFIT.CATEGORY_CODE, UPRO_CONTRACT_BENEFIT.ST_AMOUNT, UPRO_CONTRACT_BENEFIT.OT_AMOUNT, UPRO_CONTRACT_BENEFIT.DT_AMOUNT, 
+                         UPRO_CONTRACT_BENEFIT.ST_PERCENT, UPRO_CONTRACT_BENEFIT.OT_PERCENT, UPRO_CONTRACT_BENEFIT.DT_PERCENT
+HAVING        (UPRO_ORGANIZATION.ORG_ID = 43) AND (UPRO_CONTRACT.CONTRACT_ID = 10000010)</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ORG_ID">
+          <DataField>ORG_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NAME">
+          <DataField>NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CONTRACT_ID">
+          <DataField>CONTRACT_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CONTRACT_NUM">
+          <DataField>CONTRACT_NUM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BENEFIT">
+          <DataField>BENEFIT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ContractName">
+          <DataField>ContractName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CATEGORY_CODE">
+          <DataField>CATEGORY_CODE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ST_AMOUNT">
+          <DataField>ST_AMOUNT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="OT_AMOUNT">
+          <DataField>OT_AMOUNT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DT_AMOUNT">
+          <DataField>DT_AMOUNT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ST_PERCENT">
+          <DataField>ST_PERCENT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="OT_PERCENT">
+          <DataField>OT_PERCENT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DT_PERCENT">
+          <DataField>DT_PERCENT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>ee71d276-1c88-498b-a66d-23c1af5618c5</rd:ReportID>
+</Report>
