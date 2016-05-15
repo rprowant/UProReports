@@ -25,6 +25,10 @@
       <Name>Standard Specifications.rdl</Name>
       <FullPath>Standard Specifications.rdl</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>UnitsPro Outage Clock.rdl</Name>
+      <FullPath>UnitsPro Outage Clock.rdl</FullPath>
+    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>

@@ -1,25 +1,37 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "UPro Job Design Reports", "UPro Job Design Reports\UPro Job Design Reports.rptproj", "{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQL Report Views", "..\SQL Report Views\SQL Report Views\SQL Report Views.sqlproj", "{CCEC5C9A-6FBD-4FFC-B182-93451D20B346}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Default = Debug|Default
-		DebugLocal|Default = DebugLocal|Default
-		Release|Default = Release|Default
+		Debug|Any CPU = Debug|Any CPU
+		DebugLocal|Any CPU = DebugLocal|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.Debug|Default.ActiveCfg = Debug
-		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.Debug|Default.Build.0 = Debug
-		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.Debug|Default.Deploy.0 = Debug
-		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.DebugLocal|Default.ActiveCfg = DebugLocal
-		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.DebugLocal|Default.Build.0 = DebugLocal
-		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.Release|Default.ActiveCfg = Release
-		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.Release|Default.Build.0 = Release
-		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.Release|Default.Deploy.0 = Release
+		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.Debug|Any CPU.ActiveCfg = Debug
+		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.Debug|Any CPU.Build.0 = Debug
+		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.Debug|Any CPU.Deploy.0 = Debug
+		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.DebugLocal|Any CPU.ActiveCfg = DebugLocal
+		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.DebugLocal|Any CPU.Build.0 = DebugLocal
+		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.DebugLocal|Any CPU.Deploy.0 = DebugLocal
+		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.Release|Any CPU.ActiveCfg = Release
+		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.Release|Any CPU.Build.0 = Release
+		{8FF55501-C8EF-423F-BF9D-1AA7D945EFB4}.Release|Any CPU.Deploy.0 = Release
+		{CCEC5C9A-6FBD-4FFC-B182-93451D20B346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCEC5C9A-6FBD-4FFC-B182-93451D20B346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCEC5C9A-6FBD-4FFC-B182-93451D20B346}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CCEC5C9A-6FBD-4FFC-B182-93451D20B346}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCEC5C9A-6FBD-4FFC-B182-93451D20B346}.DebugLocal|Any CPU.Build.0 = Debug|Any CPU
+		{CCEC5C9A-6FBD-4FFC-B182-93451D20B346}.DebugLocal|Any CPU.Deploy.0 = Debug|Any CPU
+		{CCEC5C9A-6FBD-4FFC-B182-93451D20B346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCEC5C9A-6FBD-4FFC-B182-93451D20B346}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCEC5C9A-6FBD-4FFC-B182-93451D20B346}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
